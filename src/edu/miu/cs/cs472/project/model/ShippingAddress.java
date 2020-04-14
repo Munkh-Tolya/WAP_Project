@@ -1,4 +1,4 @@
-package edu.mum.cs.cs472.project.model;
+package edu.miu.cs.cs472.project.model;
 
 public class ShippingAddress {
 	private String street;

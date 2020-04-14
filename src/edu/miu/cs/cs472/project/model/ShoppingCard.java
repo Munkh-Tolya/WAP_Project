@@ -1,4 +1,4 @@
-package edu.mum.cs.cs472.project.model;
+package edu.miu.cs.cs472.project.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,9 @@ public class ShoppingCard {
 	}
 	public void removeItem(Item item) {
 		items.remove(item);
+	}
+	public void addItem(Item item) {
+		items.add(item);
 	}
 	
 	public List<Item> getItems() {

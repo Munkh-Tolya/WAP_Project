@@ -1,4 +1,4 @@
-package edu.mum.cs.cs472.project.model;
+package edu.miu.cs.cs472.project.model;
 
 public class Product {
 	private int id;
@@ -7,8 +7,10 @@ public class Product {
 	private double price;
 	private String imagePath;
 	private int quantity;
+	private Category category;
 	
-	public Product(int id, String name, String description, double price, String imagePath, int quantity) {
+	public Product(int id, String name, String description, double price,
+					String imagePath, int quantity, Category category) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -16,6 +18,7 @@ public class Product {
 		this.price = price;
 		this.imagePath = imagePath;
 		this.quantity = quantity;
+		this.category = category;
 	}
 	public int getId() {
 		return id;
