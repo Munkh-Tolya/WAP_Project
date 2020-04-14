@@ -18,7 +18,7 @@ import edu.miu.cs.cs472.project.model.Product;
 import edu.miu.cs.cs472.project.repository.DataRepository;
 import edu.mum.cs.cs472.project.service.ShoppingService;
 
-@WebServlet(description = "This is a shopping page", urlPatterns = { "/shop" })
+@WebServlet(description = "This is a shopping page", urlPatterns = { "/shop","/shop/*" })
 public class ShoppingController extends HttpServlet{
     private static final long serialVersionUID = 1L;
     ShoppingService shoppingService;
@@ -28,7 +28,7 @@ public class ShoppingController extends HttpServlet{
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	List<Product> products = shoppingService.getAllProduct();
+    	List<Product> products = shoppingService.getProducts(request.getParameter("category"));
     	List<Category> categories = shoppingService.getCategories();
     	request.setAttribute("products", products);
     	request.setAttribute("categories", categories);
