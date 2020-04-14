@@ -33,4 +33,12 @@ public class ShoppingService {
 	public List<Category> getCategories() {
 		return dataRepository.getCategoryList();
 	}
+	
+	public Product getProductInfo(String productId) {
+		List<Product> products = dataRepository.getProductList();
+		Product product;
+		int id = Integer.parseInt(productId);
+		product = products.stream().filter(p -> p.getId() == id).findAny().orElse(null);
+		return product;
+	}
 }
