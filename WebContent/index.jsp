@@ -8,5 +8,6 @@
 </head>
 <body>
 	Welcome to Home page!
+	<img src="img/headphone.png" alt="headphone.png" style="max-width: 180px;">
 </body>
 </html>
