@@ -42,10 +42,20 @@ public class DataRepository{
 		
 		productList.addAll(Arrays.asList(p1,p2,p3,p4,p5,p6,p7));
 		
-		Item i1 = new Item(1,p1,3);
-		Item i2 = new Item(1,p2,2);
+		Item i1 = new Item(p1,3);
+		Item i2 = new Item(p2,2);
 		shoppingCard.addItem(i1);
 		shoppingCard.addItem(i2);
+	}
+	public Product getProductById(int productId) {
+		return productList.stream().filter(p -> p.getId() == productId).findAny().orElse(null);
+	}
+	public Item getItemByProductId(int productId) {
+		return shoppingCard.getItems().stream().filter(p -> p.getProduct().getId() == productId).findAny().orElse(null);
+	}
+	public ShoppingCard addItemToCard(Item item) {
+		shoppingCard.addItem(item);
+		return shoppingCard;
 	}
 	public List<Category> getCategoryList() {
 		return categoryList;

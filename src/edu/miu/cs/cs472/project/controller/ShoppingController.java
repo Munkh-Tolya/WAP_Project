@@ -20,7 +20,7 @@ import edu.miu.cs.cs472.project.repository.DataRepository;
 import edu.mum.cs.cs472.project.service.ShoppingCardService;
 import edu.mum.cs.cs472.project.service.ShoppingService;
 
-@WebServlet(description = "This is a shopping page", urlPatterns = { "/shop","/shop/*" })
+@WebServlet(description = "This is a shopping page", urlPatterns = { "/shop" })
 public class ShoppingController extends HttpServlet{
     private static final long serialVersionUID = 1L;
     ShoppingService shoppingService;
@@ -40,11 +40,13 @@ public class ShoppingController extends HttpServlet{
     	request.getRequestDispatcher("WEB-INF/views/shop.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+    	System.out.println(shoppingCardService.addItem(1,1));
+    	System.out.println("post request called");
     }
     public void init(ServletConfig config) throws ServletException {
     	shoppingService = new ShoppingService(config.getServletContext());
     	shoppingCardService = new ShoppingCardService(config.getServletContext());
+    	System.out.println("creating");
     }
     
 }

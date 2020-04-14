@@ -1,13 +1,11 @@
 package edu.miu.cs.cs472.project.model;
 
 public class Item {
-	int id;
 	Product product;
 	int quantity;
 	double price;
 	
-	public Item(int id, Product product, int quantity) {
-		this.id = id;
+	public Item(Product product, int quantity) {
 		this.product = product;
 		this.quantity = quantity;
 		this.price = quantity * product.getPrice();
