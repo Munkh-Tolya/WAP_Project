@@ -19,10 +19,14 @@ public class ShoppingService {
 	public List<Product> getProducts(String categoryId) {
 		List<Product> products = dataRepository.getProductList();
 		if(categoryId !=null && !categoryId.isEmpty()) {
-			int id = Integer.parseInt(categoryId);
-			return products.stream()
-							.filter(e -> e.getCategory().getId() == id)
-							.collect(Collectors.toList()); 
+			try {
+				int id = Integer.parseInt(categoryId);
+				return products.stream()
+						.filter(e -> e.getCategory().getId() == id)
+						.collect(Collectors.toList()); 
+			}catch(Exception e) {
+				return products;
+			}	
 		}
 		return products;
 	}
