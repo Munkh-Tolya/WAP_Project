@@ -37,7 +37,7 @@
 												<div  class="product-item">
 													<div  class="mat-card">
 															<div  class="product-img">
-																<a class="product-link" href="#/home/product/1">
+																<a class="product-link" href="<c:url value="/product?productId=${product.id}"/>">
 																<img alt="" src="<c:url value="${product.imagePath}"/>">
 																</a>
 															</div>

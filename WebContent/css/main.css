@@ -595,3 +595,7 @@ footer .email::before{
     color:white;
     border-radius:10px; 
 }
+
+.logo img{
+	max-width:190px;
+}
