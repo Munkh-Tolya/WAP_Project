@@ -582,3 +582,16 @@ footer .email::before{
     font-weight: 700;
     margin: 0 0 20px;
 }
+
+/* To show notification. Added by Munkhuu */
+#notify {
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    background-color: #6c757d;
+    border-color: #6c757d;
+    padding:10px;
+    color:white;
+    border-radius:10px; 
+}
