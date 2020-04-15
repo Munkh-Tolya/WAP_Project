@@ -32,11 +32,11 @@ public class HomeController extends HttpServlet {
 		List<Product> featuredProducts = shoppingService.getFeaturedProducts();
 		List<Product> topProducts = shoppingService.getTopProducts();
 		List<Product> hotProducts = shoppingService.getHotProducts();
-    	List<Category> categories = shoppingService.getCategories();
+    	//List<Category> categories = shoppingService.getCategories();
     	request.setAttribute("featuredProducts", featuredProducts);
     	request.setAttribute("topProducts", topProducts);
     	request.setAttribute("hotProducts", hotProducts);
-    	request.setAttribute("categories", categories);
+    	//request.setAttribute("categories", categories);
     	request.getRequestDispatcher("WEB-INF/views/home.jsp").forward(request, response);
 	}
 

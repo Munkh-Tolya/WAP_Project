@@ -48,5 +48,10 @@ public class Order {
 		this.billingDetails = billingDetails;
 	}
 	
+	@Override
+	public String toString() {
+		return "Order id: " + this.id + "; Sum: " + sum + "\nBilling Details:\n"+"First name: "+billingDetails.getFirstName() + "; Last Name: " + billingDetails.getLastName();
+	}
+	
 		
 }

@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import edu.miu.cs.cs472.project.model.ShoppingCard;
+import edu.miu.cs.cs472.project.repository.DataRepository;
 import edu.mum.cs.cs472.project.service.ShoppingCardService;
 
 /**
@@ -23,31 +24,20 @@ import edu.mum.cs.cs472.project.service.ShoppingCardService;
 @WebServlet(description = "Shopping Card", urlPatterns = { "/cart","/cart/*" })
 public class ShoppingCardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	ShoppingCardService shoppingCardService;
+	//ShoppingCardService shoppingCardService;
        
    public ShoppingCardController() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ShoppingCard shoppingCard = shoppingCardService.getShoppingCard();
-		request.setAttribute("shoppingCard", shoppingCard);
+		/*ShoppingCard shoppingCard = shoppingCardService.getShoppingCard();
+		request.setAttribute("shoppingCard", shoppingCard);*/
 		request.getRequestDispatcher("/WEB-INF/views/cart.jsp").forward(request, response);
 	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int delId = Integer.parseInt(request.getParameter("item"));
-		ShoppingCard shoppingCard = shoppingCardService.getShoppingCard();
-		for(int i=0;i<shoppingCard.getItems().size();i++) {
-			if(shoppingCard.getItems().get(i).getProduct().getId()==delId) {
-				shoppingCard.getItems().remove(i);
-			}
-		}
-				
-	}
-		
-	public void init(ServletConfig config) throws ServletException {
+			
+	/*public void init(ServletConfig config) throws ServletException {
 		shoppingCardService = new ShoppingCardService(config.getServletContext());
-	}
+	}*/
 
 }

@@ -1,7 +1,7 @@
 package edu.miu.cs.cs472.project.model;
 
 public class BillingDetails {
-	private String street;
+	private String address;
 	private String zipcode;
 	private String city;
 	private String state;
@@ -11,10 +11,10 @@ public class BillingDetails {
 	private String phone;
 	private String note;
 	
-	public BillingDetails(String fn, String ln, String str, String zip, String c, String stt, String e, String ph, String n) {
+	public BillingDetails(String fn, String ln, String addr, String zip, String c, String stt, String e, String ph, String n) {
 		this.firstName = fn;
 		this.lastName = ln;
-		this.street = str;
+		this.address = addr;
 		this.zipcode = zip;
 		this.city = c;
 		this.state = stt;
@@ -23,12 +23,12 @@ public class BillingDetails {
 		this.note = n;
 	}
 
-	public String getStreet() {
-		return street;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setStreet(String street) {
-		this.street = street;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getZipcode() {

@@ -48,4 +48,18 @@ public class ShoppingCardService {
 		}
 		return jo.toString();
 	}
+	
+	public String removeItem(String strProductId) throws JSONException {
+		JSONObject jo = new JSONObject();
+		int productId = Integer.parseInt(strProductId);
+		try {
+			dataRepository.removeIitemFromCard(productId);
+			jo.put("success", true);
+			jo.put("message", dataRepository.getShoppingCard().getJson());
+		}catch(Exception e) {
+			jo.put("success", false);
+			jo.put("message", "Sorry, Error occured. Please try again!");
+		}
+		return jo.toString();
+	}
 }
