@@ -141,15 +141,6 @@
 			     </div>			
 			</div>
 		
-		<%-- <fieldset>
-			<p>Categories:</p>
-			<ul>
-				<c:forEach var="category" items="${categories}">
-					<li><a href="shop?category=${category.id}"><c:out value="${category.name}"/></a></li>
-				</c:forEach>
-			</ul>
-			
-		 --%>
 		<!-- JQuery & app.js files are included in the footer element. -->
 		<%@ include file="/WEB-INF/fragments/footer.jsp" %>		
 
