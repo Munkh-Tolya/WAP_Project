@@ -37,4 +37,16 @@ public class ShoppingService {
 	public Product getProductInfo(String productId) {
 		return dataRepository.getProductById(Integer.parseInt(productId));
 	}
+	
+	/*Added by: Namuun; April 14, 2020; START:*/
+	public List<Product> getFeaturedProducts(){
+		return dataRepository.getFeaturedProducts();
+	}
+	public List<Product> getTopProducts(){
+		return dataRepository.getTopSellingProducts();
+	}
+	public List<Product> getHotProducts(){
+		return dataRepository.getHotOfferProducts();
+	}
+	/*Added by: Namuun; April 14, 2020; END*/
 }
