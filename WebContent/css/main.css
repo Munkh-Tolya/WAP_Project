@@ -593,5 +593,5 @@ footer .email::before{
     border-color: #6c757d;
     padding:10px;
     color:white;
-    border-radius:10px;
+    border-radius:10px; 
 }
