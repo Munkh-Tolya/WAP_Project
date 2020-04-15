@@ -34,9 +34,11 @@ public class ShoppingService {
 		return dataRepository.getCategoryList();
 	}
 	
+	/*Added by: Otgonbayar; April 14, 2020; START:*/
 	public Product getProductInfo(String productId) {
 		return dataRepository.getProductById(Integer.parseInt(productId));
 	}
+	/*Added by: Otgonbayar; April 14, 2020; END*/
 	
 	/*Added by: Namuun; April 14, 2020; START:*/
 	public List<Product> getFeaturedProducts(){

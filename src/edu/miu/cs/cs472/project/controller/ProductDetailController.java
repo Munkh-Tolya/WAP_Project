@@ -30,7 +30,13 @@ public class ProductDetailController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Product product = shoppingService.getProductInfo(request.getParameter("productId"));
+		List<Product> featuredProducts = shoppingService.getFeaturedProducts();
+		List<Product> topProducts = shoppingService.getTopProducts();
+		List<Product> hotProducts = shoppingService.getHotProducts();
     	request.setAttribute("product", product);
+    	request.setAttribute("featuredProducts", featuredProducts);
+    	request.setAttribute("topProducts", topProducts);
+    	request.setAttribute("hotProducts", hotProducts);
     	request.getRequestDispatcher("WEB-INF/views/product.jsp").forward(request, response);
 		
 	}
