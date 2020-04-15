@@ -2,7 +2,7 @@
 	<div id="toolbar">
 		<div class="container">
 			<div class="float-right">
-				<a href="/admin" class="link-wishlist up">Admin</a>				
+				<a href="/admin" class="link-admin up">Admin</a>				
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -10,7 +10,7 @@
 	<div id="top">
 		<div class="container">		
 			<a href="<c:url value="/"/>" class="logo"><img src="images/logo.png" /></a>
-			<a class="card-link" href="<c:url value="/about-us"/>"><i class="material-icons">shopping_cart</i>
+			<a class="card-link" href="<c:url value="/cart"/>"><i class="material-icons">shopping_cart</i>
 			<span id="itemCount">
 				<c:out value="${shoppingCard.items.size()}"></c:out>
 			</span>
