@@ -49,7 +49,7 @@ $(function(){
 			let gTotal = parseFloat($('#grandTotal').html());
 			showLoader();
 			
-			$.ajax("http://localhost:8081/wap_project/shop",{
+			$.ajax("http://localhost:8080/wap_project/shop",{
 				method:"POST",
 				data: {"cmd":"removeProductFromCard",
 						"productId":productId,
