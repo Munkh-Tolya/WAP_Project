@@ -10,7 +10,7 @@
 	<div id="top">
 		<div class="container">		
 			<a href="<c:url value="/"/>" class="logo"><img src="images/logo.png" /></a>
-			<a class="card-link" href="<c:url value="/about-us"/>"><i class="material-icons">shopping_cart</i><span id="itemCount">0</span></a>
+			<a class="card-link" href="<c:url value="/about-us"/>"><i class="material-icons">shopping_cart</i><span id="itemCount">2</span></a>
 			<span id="helpline">
 				<span>Helpline</span>
 				<span class="phone">(800) 369-6480</span>
@@ -43,7 +43,7 @@
 		        	<a class="nav-link" href="<c:url value="/about-us"/>">About Us</a>
 		      	</li>
 		      	<li class="nav-item">
-		        	<a class="nav-link" href="<c:url value="/cotact"/>">Contact</a>
+		        	<a class="nav-link" href="<c:url value="/contact"/>">Contact</a>
 		      	</li>
    			</ul>
 		</div>
