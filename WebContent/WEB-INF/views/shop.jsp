@@ -4,43 +4,103 @@
 <c:set var="cardTotal" value="0" />
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-
-	  <fieldset>
-	    <legend>Shopping card:</legend>
-		<c:forEach var="item" items="${shoppingCard.items}">
-			<p>${item.product.name} - ${item.quantity} X ${item.product.price}</p>
-			<c:set var="cardTotal" value="${cardTotal + item.price}" scope="page"/>
-		</c:forEach>
-		<b>Total:</b> <c:out value="$${cardTotal}"></c:out>
-	  </fieldset>
-	
-	<p>Categories:</p>
-	<ul>
-		<c:forEach var="category" items="${categories}">
-    		<li><a href="shop?category=${category.id}"><c:out value="${category.name}"/></a></li>
-		</c:forEach>
-	</ul>
-	<br/>
-	<p>Products:</p>
-	<ul>
-		<c:forEach var="product" items="${products}">
-    		<li>
-    			<c:out value="${product.name}"/>
-				<img src="<c:out value="${product.imagePath}"/>" alt="${product.imagePath}" style="max-width: 180px;"/>
-				<button class="addToCard" value="${product.id}">add to card</button>
-    		</li>
-		</c:forEach>
+	<head>
+		<meta charset="ISO-8859-1">
+   	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CS472 WAP - Team Project - E-Commerce</title>
 		
-	</ul>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-    <script src="js/shopping.js"></script>
-</body>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+
+    	<!-- <link rel="stylesheet" href="WEB-INF/css/main.css"> -->
+    	<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/shop.css">
+	</head>
+	<body>
+		<%@ include file="/WEB-INF/fragments/header.jsp" %>
+		<div class="container">
+			<!-- Section: Banner and Categories list -->
+			<section id="hero" class="mb30">
+				<div class="row">
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<%@ include file="/WEB-INF/fragments/topCategories.jsp" %>
+					</div>
+					<div class="col-md-9 col-sm-8 col-xs-12">
+						<%-- <%@ include file="/WEB-INF/fragments/heroBanner.jsp" %> --%>
+							<div class="sidebar-wrapper">
+								<div  class="all-products">
+									<c:forEach var="product" items="${products}">
+										<div class="col">
+											<div  class="product-box">
+												<div  class="product-item">
+													<div  class="mat-card">
+															<div  class="product-img">
+																<a class="product-link" href="#/home/product/1">
+																<img  alt="" src="<c:out value="${product.imagePath}"/>">
+																</a>
+															</div>
+															<div  class="product-info-wrapper"><span class="category"><c:out value="${product.category.name}"/></span>
+															<div  class="title-wrap">
+																<h4><c:out value="${product.name}"/></h4>
+															</div>
+															<div  class="stars">
+																<mat-icon class="mat-icon material-icons" role="img">star_rate</mat-icon>
+																<mat-icon class="mat-icon material-icons" role="img">star_rate</mat-icon>
+																<mat-icon class="mat-icon material-icons" role="img">star_rate</mat-icon>
+																<mat-icon class="mat-icon material-icons" role="img">star_rate</mat-icon>
+																<mat-icon class="mat-icon material-icons" role="img">star_rate</mat-icon>
+															</div>
+															<div  class="price-wrap">
+																<p>$<c:out value="${product.price}"/></p>
+																<a>
+																<mat-icon class="mat-icon material-icons" role="img">shopping_cart</mat-icon>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</c:forEach>
+								</div>
+							</div>
+					</div>
+				</div>
+			</section>
+		
+			
+		</div>
+		<%-- <fieldset>
+				<legend>Shopping card:</legend>
+				<c:forEach var="item" items="${shoppingCard.items}">
+					<p>${item.product.name} - ${item.quantity} X ${item.product.price}</p>
+					<c:set var="cardTotal" value="${cardTotal + item.price}" scope="page"/>
+				</c:forEach>
+				<b>Total:</b> <c:out value="$${cardTotal}"></c:out>
+			</fieldset>
+			
+			<p>Categories:</p>
+			<ul>
+				<c:forEach var="category" items="${categories}">
+					<li><a href="shop?category=${category.id}"><c:out value="${category.name}"/></a></li>
+				</c:forEach>
+			</ul>
+			<br/>
+			<p>Products:</p>
+			<ul>
+				<c:forEach var="product" items="${products}">
+					<li>
+						<c:out value="${product.name}"/>
+						<img src="<c:out value="${product.imagePath}"/>" alt="${product.imagePath}" style="max-width: 180px;"/>
+						<button class="addToCard" value="${product.id}">add to card</button>
+					</li>
+				</c:forEach>
+			</ul> --%>
+		<!-- JQuery & app.js files are included in the footer element. -->
+		<%@ include file="/WEB-INF/fragments/footer.jsp" %>	
+		<script src="js/shopping.js"></script>
+	</body>
 </html>
+
