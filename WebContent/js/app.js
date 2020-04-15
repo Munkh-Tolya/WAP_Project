@@ -12,7 +12,7 @@ $(function(){
 	}
 	
 	if($('#cart').hasClass('active')){
-		$(".remove").on("click",function(evt){
+		/*$(".remove").on("click",function(evt){
 			evt.preventDefault();
 			const dataItem = $(this).data("item");
 			const itemRow = $('#item-'+dataItem);
@@ -38,6 +38,36 @@ $(function(){
             })
             .catch(error => showFailureInfo())
             .then(hideLoader); 
+		});*/
+		
+		$(".remove").on("click",function(evt){
+			evt.preventDefault();
+			const productId = $(this).data("item");
+			const itemRow = $('#item-'+productId);
+			console.log($(itemRow).find('.total').html());
+			const itemPrice = parseFloat($(itemRow).find('.total').html().replace("$",""));
+			let gTotal = parseFloat($('#grandTotal').html());
+			showLoader();
+			
+			$.ajax("http://localhost:8081/wap_project/shop",{
+				method:"POST",
+				data: {"cmd":"removeProductFromCard",
+						"productId":productId,
+						"quantity":1},
+				dataType: "json"
+			})
+			.done(function(response){
+				if(response.success){
+					itemRow.remove();
+	                gTotal -= itemPrice;
+	                $('#grandTotal').html(gTotal);
+				}else{
+					alert(response.message);
+				}
+			})
+			.fail(function(){
+				alert("Failed to remove this product from the shopping card!");
+			})
 		});
 	}
 });

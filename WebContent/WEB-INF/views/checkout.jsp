@@ -25,6 +25,7 @@
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<h2>Billing Details</h2>
 						<form method="POST" id="myForm">
+						<input type="hidden" name="lastOrderId" value="<c:out value="${lastOrderId}" />" />
 							<div class="row">
 			                	<div class="col-md-6 col-xs-12">
 				                	<div class="input text">
@@ -54,14 +55,15 @@
 			                	</div>
 			                	<div class="col-md-6 col-xs-12">
 				                	<div class="input text">
-					                    <input type="text" name="zipcode" id="zipcode" minlength="2" required placeholder="Postcode (required)" />			                    
+					                    <input type="text" name="zipcode" id="zipcode" required placeholder="Postcode (required)" 
+					                    pattern="(^(?!0{5})(\d{5})(?!-?0{4})(|-\d{4})?$)" title="Please enter a valid postcode." />			                    
 					                </div>
 			                	</div>
 			                </div>
 			                <div class="row">
 			                	<div class="col-md-6 col-xs-12">
 				                	<div class="input text">
-					                    <input type="text" name="email" id="email" minlength="2" required placeholder="Email Address (required)" />			                    
+					                    <input type="email" name="email" id="email" minlength="2" required placeholder="Email Address (required)" />			                    
 					                </div>
 			                	</div>
 			                	<div class="col-md-6 col-xs-12">
