@@ -2,8 +2,7 @@
 	<div id="toolbar">
 		<div class="container">
 			<div class="float-right">
-				<a href="#" class="link-wishlist up">Wishlist</a>
-				<a href="#" class="link-compare up">Compare</a>
+				<a href="/admin" class="link-wishlist up">Admin</a>				
 			</div>
 			<div class="clearfix"></div>
 		</div>
