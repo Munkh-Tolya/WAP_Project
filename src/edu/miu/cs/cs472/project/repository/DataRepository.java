@@ -49,7 +49,7 @@ public class DataRepository{
 		Product p1 = new Product(1,"ONTEC E Headset","Sample product",175,"uploads/pro1.png",10,c1);
 		Product p2 = new Product(2,"Solo Headset","Sample product",235,"uploads/pro2.png",10,c1);
 		Product p3 = new Product(3,"Ultra Whitte Wireless","Sample product",350,"uploads/pro3.png",10,c1);
-		Product p4 = new Product(4,"Wireless Mondo","Sample product",266,"img",10,c1);
+		Product p4 = new Product(4,"Wireless Mondo","Sample product",266,"uploads/pro33",10,c1);
 		
 		Product p5 = new Product(5,"Tablet Red 8500U 2TB","Sample product",100,"uploads/pro4.png",10,c2);
 		Product p6 = new Product(6,"Tablet VX3000 Extra","Sample product",850,"uploads/pro6.png",10,c2);
