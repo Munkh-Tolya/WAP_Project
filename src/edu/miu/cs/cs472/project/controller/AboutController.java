@@ -51,7 +51,7 @@ public class AboutController extends HttpServlet {
 	}
     public void init(ServletConfig config) throws ServletException {
     	shoppingService = new ShoppingService(config.getServletContext());
-    	System.out.println("creating");
+    	System.out.println("creating2");
     
     }
 

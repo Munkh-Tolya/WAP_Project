@@ -19,6 +19,7 @@
 	</head>
 	<body>		
 		<%@ include file="/WEB-INF/fragments/header.jsp" %>
+		
 			<div class="row">
 			 	<div class="col-md-6 col-sm-6 col-xs-12">
 					<img src="images/miu.jpg" alt="Trulli">
@@ -89,16 +90,17 @@
 							<div class="desc">100% money back guarantee</div>
 						</div>
 					</div>
+		  
+		      </div>     
+		   </section>
 		    
-		         </div>
-		    </div>     
 		    
 		    <section class="brand-promises border-gray-ligth mb30">  
 		     	<div class="row">
 						
 						<div class="col-md-2 col-sm-3 col-xs-12">
 						  <div class="item featured-products">
-						    	<img src="images/image1.png" alt="Trulli" width="300" height="300">
+						    	<img src="images/image1.png" alt="Trulli" width="300" height="300" border="2">
 						     	<h4></h4>
 						    	<h4>Team member</h4>
 						        <h5> Munkh-Erdene.T </h5>
@@ -106,7 +108,7 @@
 						</div>
 						<div class="col-md-2 col-sm-3 col-xs-12">
 							<div class="item featured-products">
-							     <img src="images/image3.jpg" alt="Trulli" width="300" height="300">
+							     <img src="images/image3.jpg" alt="Trulli" width="300" height="300" border="5" >
 							     <h4></h4>
 							     <h4>Team member</h4>
 						         <h5> Namuun.S </h5>
@@ -139,7 +141,7 @@
 						        <h5> Uuganbayar.O </h5>
 						</div>
 			     </div>			
-			</div>
+		 </section>
 		
 		<!-- JQuery & app.js files are included in the footer element. -->
 		<%@ include file="/WEB-INF/fragments/footer.jsp" %>		
