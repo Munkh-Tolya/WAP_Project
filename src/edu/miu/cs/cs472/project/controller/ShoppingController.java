@@ -1,7 +1,10 @@
 package edu.miu.cs.cs472.project.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
@@ -12,6 +15,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.miu.cs.cs472.project.model.Category;
 import edu.miu.cs.cs472.project.model.Product;
@@ -40,13 +46,34 @@ public class ShoppingController extends HttpServlet{
     	request.getRequestDispatcher("WEB-INF/views/shop.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	System.out.println(shoppingCardService.addItem(1,1));
-    	System.out.println("post request called");
+    	String str = "";
+    	String cmd = request.getParameter("cmd");
+		try {
+			if(cmd != null && !cmd.isEmpty()) {
+				switch(cmd) {
+					case "addProductToCard":
+						str = shoppingCardService.addItem(request.getParameter("quantity"),request.getParameter("productId"));
+						break;
+					case "removeProductFromCard":
+						str = "";
+						break;
+				}
+				response.setContentType("application/json");
+		    	response.setCharacterEncoding("utf-8");
+
+		    	PrintWriter out = response.getWriter();
+		    	out.print(str);
+		    	out.flush();
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}  
     }
     public void init(ServletConfig config) throws ServletException {
     	shoppingService = new ShoppingService(config.getServletContext());
     	shoppingCardService = new ShoppingCardService(config.getServletContext());
     	System.out.println("creating");
+    
     }
     
 }

@@ -1,8 +1,13 @@
 package edu.mum.cs.cs472.project.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletContext;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.miu.cs.cs472.project.model.Item;
 import edu.miu.cs.cs472.project.model.Product;
@@ -19,20 +24,27 @@ public class ShoppingCardService {
 	public ShoppingCard getShoppingCard() {
 		return dataRepository.getShoppingCard();
 	}
-	public String addItem(int quantity, int productId) {
+	public String addItem(String strQuantity, String strProductId) throws JSONException {
+		JSONObject jo = new JSONObject();
+		int quantity = Integer.parseInt(strQuantity);
+		int productId = Integer.parseInt(strProductId);
 		Product product = dataRepository.getProductById(productId);
 		if(product.getQuantity() < quantity) {
-			return "Sorry, Product is out of stock";
+			jo.put("success", true);
+			jo.put("message", "Sorry, Product is out of stock");
 		}else {
-			ShoppingCard card = dataRepository.getShoppingCard();
 			Item item = dataRepository.getItemByProductId(productId);
 			if(item == null) {
 				dataRepository.addItemToCard(new Item(product,quantity));
 			}else {
 				item.setQuantity(item.getQuantity() + quantity);
+				item.setPrice(item.getPrice() + quantity * product.getPrice());
 			}
 			product.setQuantity(product.getQuantity() - quantity);
-			return "Successfull";
+			
+			jo.put("success", true);
+			jo.put("message", dataRepository.getShoppingCard().getJson());
 		}
+		return jo.toString();
 	}
 }
