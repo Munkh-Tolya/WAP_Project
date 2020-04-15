@@ -16,9 +16,9 @@ function addProduct(event){
 	.done(function(response){
 		if(response.success){
 			$('#itemCount').text(response.cardSize);
-			alert(response.message);
+			showSuccess(response.message);
 		}else{
-			alert(response.message);
+			showError(response.message);
 		}
 	})
 	.fail(function(){

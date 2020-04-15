@@ -101,6 +101,7 @@
 		<!-- JQuery & app.js files are included in the footer element. -->
 		<%@ include file="/WEB-INF/fragments/footer.jsp" %>	
 		<script src="js/shopping.js"></script>
+		<script src="js/notify.js"></script>
 	</body>
 </html>
 
