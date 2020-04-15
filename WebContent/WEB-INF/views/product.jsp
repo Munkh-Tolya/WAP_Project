@@ -14,6 +14,10 @@
 <p>Description: "${product.description}"</p>
 <p>Price: "${product.price}"</p>
 <p>Quantity: "${product.quantity}"</p>
+<button id="minus">−</button>
+<input type="text" disabled value="0" id="input"/>
+<button id="plus">+</button><br>
+<button id="addToCard">ADD TO CARD</button>
 
 </body>
 </html>
