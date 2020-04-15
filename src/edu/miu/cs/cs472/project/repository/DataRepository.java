@@ -52,10 +52,7 @@ public class DataRepository{
 		Product p4 = new Product(4,"Wireless Mondo","Sample product",266,"uploads/pro33.png",10,c1);
 		
 		Product p5 = new Product(5,"Tablet Red 8500U 2TB","Sample product",100,"uploads/pro4.png",10,c2);
-		Product p6 = new Product(6,"Tablet VX3000 Extra","Sample product",850,"uploads/pro6.png",10,c2);
 		Product p7 = new Product(7,"Laptop Sens 7200L","Sample product",760,"uploads/pro8.png",10,c2);
-
-		productList.addAll(Arrays.asList(p1,p2,p3,p4,p5,p6,p7));
 		
 		/*Added by: Namuun; April 14, 2020; START:*/
 		featuredProducts.addAll(Arrays.asList(p1,p2,p3));
@@ -69,6 +66,30 @@ public class DataRepository{
 		hotOfferProducts.addAll(Arrays.asList(p10,p7,p11));
 		/*Added by: Namuun; April 14, 2020; END*/
 		
+		/*Added by: Munkh-Erdene; April 15, 2020; START:*/
+		Product p12 = new Product(12,"Smartphone Tablet Spring2000","Sample product",400,"uploads/pro10.png",10,c3);
+		Product p13 = new Product(13,"Extra Thin Elitte","Sample product",700,"uploads/pro11.png",10,c3);
+		Product p14 = new Product(14,"Notebook Polo 4000","Sample product",399,"uploads/pro12.png",10,c3);
+		Product p15 = new Product(15,"Smartphone Elitte Pro","Sample product",699,"uploads/pro13.png",10,c3);
+		Product p16 = new Product(16,"Smartphone XD5000","Sample product",799,"uploads/pro14.png",10,c3);
+
+		Product p17 = new Product(17,"Camera Xd Pro With Waterproof Cover","Sample product",499,"uploads/pro15.png",10,c4);
+		Product p18 = new Product(18,"Camera HD200 X100","Sample product",479,"uploads/pro16.png",10,c4);
+		Product p19 = new Product(19,"Smart Camera Extra Mini2000","Sample product",799,"uploads/pro17.png",10,c4);
+		Product p20 = new Product(20,"ONTEC Camera W5000","Sample product",400,"uploads/pro18.png",10,c4);
+		Product p21 = new Product(21,"Classic Camera E5000","Sample product",400,"uploads/pro19.png",10,c4);
+		
+		Product p22 = new Product(22,"TV Premium 2000","Sample product",799,"uploads/pro20.png",10,c5);
+		Product p23 = new Product(23,"Camera HD200 X100","Sample product",799,"uploads/pro21.png",10,c5);
+		Product p24 = new Product(24,"Smart Camera Extra Mini2000","Sample product",900,"uploads/pro22.png",10,c5);
+		Product p25 = new Product(25,"ONTEC Camera W5000","Sample product",399,"uploads/pro23.png",10,c5);
+		
+		Product p26 = new Product(26,"Smart Watch","Sample product",366,"uploads/pro24.png",10,c6);
+		Product p27 = new Product(27,"Smart Watch Zoop","Sample product",100,"uploads/pro25.png",10,c6);
+		Product p28 = new Product(28,"Hybrid Smartwatch Waterproof","Sample product",755,"uploads/pro26.png",10,c6);
+		/*Added by: Munkh-Erdene; April 15, 2020; END:*/
+		
+		productList.addAll(Arrays.asList(p1,p2,p3,p4,p5,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28));
 		Item i1 = new Item(p1,3);
 		Item i2 = new Item(p2,2);
 		shoppingCard.addItem(i1);
