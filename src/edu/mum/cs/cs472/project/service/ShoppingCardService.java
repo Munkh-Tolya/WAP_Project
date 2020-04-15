@@ -30,7 +30,7 @@ public class ShoppingCardService {
 		int productId = Integer.parseInt(strProductId);
 		Product product = dataRepository.getProductById(productId);
 		if(product.getQuantity() < quantity) {
-			jo.put("success", true);
+			jo.put("success", false);
 			jo.put("message", "Sorry, Product is out of stock");
 		}else {
 			Item item = dataRepository.getItemByProductId(productId);
