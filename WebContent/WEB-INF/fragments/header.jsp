@@ -10,7 +10,11 @@
 	<div id="top">
 		<div class="container">		
 			<a href="<c:url value="/"/>" class="logo"><img src="images/logo.png" /></a>
-			<a class="card-link" href="<c:url value="/about-us"/>"><i class="material-icons">shopping_cart</i><span id="itemCount">2</span></a>
+			<a class="card-link" href="<c:url value="/about-us"/>"><i class="material-icons">shopping_cart</i>
+			<span id="itemCount">
+				<c:out value="${shoppingCard.items.size()}"></c:out>
+			</span>
+			</a>
 			<span id="helpline">
 				<span>Helpline</span>
 				<span class="phone">(800) 369-6480</span>

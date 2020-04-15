@@ -38,11 +38,13 @@ public class ShoppingController extends HttpServlet{
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	List<Product> products = shoppingService.getProducts(request.getParameter("category"));
+    	
     	List<Category> categories = shoppingService.getCategories();
     	ShoppingCard shoppingCard = shoppingCardService.getShoppingCard();
-    	request.setAttribute("products", products);
     	request.setAttribute("categories", categories);
     	request.setAttribute("shoppingCard", shoppingCard);
+    	
+      	request.setAttribute("products", products);
     	request.getRequestDispatcher("WEB-INF/views/shop.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

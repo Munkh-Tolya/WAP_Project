@@ -38,7 +38,7 @@
 													<div  class="mat-card">
 															<div  class="product-img">
 																<a class="product-link" href="#/home/product/1">
-																<img  alt="" src="<c:out value="${product.imagePath}"/>">
+																<img alt="" src="<c:url value="${product.imagePath}"/>">
 																</a>
 															</div>
 															<div  class="product-info-wrapper"><span class="category"><c:out value="${product.category.name}"/></span>
@@ -54,8 +54,8 @@
 															</div>
 															<div  class="price-wrap">
 																<p>$<c:out value="${product.price}"/></p>
-																<a>
-																<mat-icon class="mat-icon material-icons" role="img">shopping_cart</mat-icon>
+																<a class="addToCard" value="<c:out value="${product.id}"/>">
+																	<mat-icon class="mat-icon material-icons" role="img">shopping_cart</mat-icon>
 																</a>
 															</div>
 														</div>

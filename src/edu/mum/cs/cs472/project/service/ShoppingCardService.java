@@ -43,7 +43,8 @@ public class ShoppingCardService {
 			product.setQuantity(product.getQuantity() - quantity);
 			
 			jo.put("success", true);
-			jo.put("message", dataRepository.getShoppingCard().getJson());
+			jo.put("message", "The product " + product.getName() + " has been added to cart.");
+			jo.put("cardSize", dataRepository.getShoppingCard().getItems().size());
 		}
 		return jo.toString();
 	}
