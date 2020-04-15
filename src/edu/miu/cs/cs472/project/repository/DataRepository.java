@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import edu.miu.cs.cs472.project.model.BillingDetails;
 import edu.miu.cs.cs472.project.model.Category;
 import edu.miu.cs.cs472.project.model.Item;
 import edu.miu.cs.cs472.project.model.Order;
@@ -147,6 +148,19 @@ public class DataRepository{
 	}
 	public void setHotOfferProducts(List<Product> hotOfferProducts) {
 		this.hotOfferProducts = hotOfferProducts;
-	}
+	}	
 	
+	/*Added by: Namuun; April 15, 2020; START:*/
+	public Order addOrder(int orderId, double sum, BillingDetails bd) {
+		Order newOrder = new Order(orderId,this.shoppingCard.getItems(),sum,bd);
+		this.orderList.add(newOrder);
+		return newOrder;
+	}
+	public void removeIitemFromCard(int productId) {
+		this.shoppingCard.removeItem(getItemByProductId(productId));		
+	}
+	public void emptyShoppingCart() {
+		this.shoppingCard = null;
+	}
+	/*Added by: Namuun; April 15, 2020; END:*/
 }
