@@ -31,7 +31,7 @@
 		<c:forEach var="product" items="${products}">
     		<li>
     			<c:out value="${product.name}"/>
-				<img src="img/<c:out value="${product.imagePath}"/>" alt="${product.imagePath}" style="max-width: 180px;"/>
+				<img src="<c:out value="${product.imagePath}"/>" alt="${product.imagePath}" style="max-width: 180px;"/>
 				<button class="addToCard" value="${product.id}">add to card</button>
     		</li>
 		</c:forEach>
