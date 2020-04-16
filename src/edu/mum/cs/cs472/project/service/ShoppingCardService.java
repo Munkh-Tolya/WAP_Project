@@ -53,9 +53,11 @@ public class ShoppingCardService {
 		JSONObject jo = new JSONObject();
 		int productId = Integer.parseInt(strProductId);
 		try {
+			Product product = dataRepository.getProductById(productId);
 			dataRepository.removeIitemFromCard(productId);
 			jo.put("success", true);
-			jo.put("message", dataRepository.getShoppingCard().getJson());
+			jo.put("message", "The product " + product.getName() + " has been removed from your cart.");
+			jo.put("cardSize", dataRepository.getShoppingCard().getItems().size());
 		}catch(Exception e) {
 			jo.put("success", false);
 			jo.put("message", "Sorry, Error occured. Please try again!");
