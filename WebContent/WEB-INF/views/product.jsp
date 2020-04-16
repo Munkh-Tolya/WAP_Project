@@ -24,7 +24,7 @@
 				<h2>${product.name}</h2>
 				<h4>$ ${product.price}</h4>
 				<div class="horizontal-line">
-					<p>${product.description}</p>
+					<p class="text-justify">${product.description}</p>
 				</div>
 				<div>
 					<input type="text" disabled value="${product.quantity}" id="productQuantity" style="visibility: hidden;"/>
