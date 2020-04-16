@@ -589,6 +589,18 @@ footer .email::before{
 	color: green;
 }
 
+.orders-list #cart{
+	margin-top: 15px;
+}
+.orders-list h1{
+    font-size: 33px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.orders-list .grandTotal{
+	font-size: 20px;
+}
+
 /* To show notification. Added by Munkhuu */
 #notify {
     position: fixed;
