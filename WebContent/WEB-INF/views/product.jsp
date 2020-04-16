@@ -52,7 +52,7 @@
 					<c:forEach var="product" items="${featuredProducts}" varStatus="index">
 						<div class="carousel-item ${index.index ==0 ? 'active' : '' }">
 							<div class="mat-card item col mb20 m-4">
-								<div class="col-md-12 col-sm-4 col-xs-6 thumb" style="padding: 0px;">
+								<div class="col-md-12 col-sm-4 col-xs-6 thumb mb-3" style="padding: 0px;">
 									<a href="<c:url value="/product?productId=${product.id}"/>" class="thumb"><img src="<c:out value = "${product.imagePath}" />" /></a>
 								</div>
 								<div class="col-md-12 col-sm-8 col-xs-6">
