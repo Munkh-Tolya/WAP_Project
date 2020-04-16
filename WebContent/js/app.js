@@ -11,34 +11,7 @@ $(function(){
 		});
 	}
 	
-	if($('#cart').hasClass('active')){
-		/*$(".remove").on("click",function(evt){
-			evt.preventDefault();
-			const dataItem = $(this).data("item");
-			const itemRow = $('#item-'+dataItem);
-			console.log($(itemRow).find('.total').html());
-			const itemPrice = parseFloat($(itemRow).find('.total').html().replace("$",""));
-			let gTotal = parseFloat($('#grandTotal').html());
-			showLoader();
-            fetch("cart/remove", 
-            {  method: 'POST',  
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: 'item='+dataItem
-            })
-            .then(res=>{
-                if(res.ok){
-	                itemRow.remove();
-	                gTotal -= itemPrice;
-	                $('#grandTotal').html(gTotal);
-                }else{
-                	alert("Please try again!");
-                }
-            })
-            .catch(error => showFailureInfo())
-            .then(hideLoader); 
-		});*/
+	if($('#cart').hasClass('active')){		
 		
 		$(".remove").on("click",function(evt){
 			evt.preventDefault();
@@ -61,12 +34,17 @@ $(function(){
 					itemRow.remove();
 	                gTotal -= itemPrice;
 	                $('#grandTotal').html(gTotal);
+	                $('#itemCount').text(response.cardSize);
+	                showSuccess(response.message);
+	                if(response.cardSize==0){
+	                	$("#cart").html("<div>Your Shopping Cart is empty.</div>");
+	                }
 				}else{
-					alert(response.message);
+					showError(response.message);
 				}
 			})
 			.fail(function(){
-				alert("Failed to remove this product from the shopping card!");
+				alert("Failed to remove this product from the shopping cart!");
 			})
 		});
 	}
