@@ -36,7 +36,6 @@ public class AboutController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		List<Category> categories = shoppingService.getCategories();
 		request.setAttribute("categories", categories);
 		request.getRequestDispatcher("WEB-INF/views/about.jsp").forward(request, response);
@@ -51,7 +50,6 @@ public class AboutController extends HttpServlet {
 	}
     public void init(ServletConfig config) throws ServletException {
     	shoppingService = new ShoppingService(config.getServletContext());
-    	System.out.println("creating2");
     
     }
 

@@ -46,9 +46,6 @@
 		      	<li class="nav-item">
 		        	<a class="nav-link" href="<c:url value="/about-us"/>">About Us</a>
 		      	</li>
-		      	<li class="nav-item">
-		        	<a class="nav-link" href="<c:url value="/contact"/>">Contact</a>
-		      	</li>
    			</ul>
 		</div>
 	</div>

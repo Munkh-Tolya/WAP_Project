@@ -31,13 +31,9 @@ public class ShoppingCardController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*ShoppingCard shoppingCard = shoppingCardService.getShoppingCard();
-		request.setAttribute("shoppingCard", shoppingCard);*/
 		request.getRequestDispatcher("/WEB-INF/views/cart.jsp").forward(request, response);
 	}
 			
-	/*public void init(ServletConfig config) throws ServletException {
-		shoppingCardService = new ShoppingCardService(config.getServletContext());
-	}*/
+	
 
 }

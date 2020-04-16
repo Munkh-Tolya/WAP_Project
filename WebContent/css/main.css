@@ -605,3 +605,8 @@ footer .email::before{
 .logo img{
 	max-width:190px;
 }
+
+.foo-desc{
+	margin-left:5px;
+	text-align:justify;
+}

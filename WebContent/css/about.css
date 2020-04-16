@@ -598,6 +598,7 @@ footer .email::before{
 
 .collapsible:hover {
   background-color: #ffc111;
+  color:white;
 }
 
 .content {
@@ -607,4 +608,13 @@ footer .email::before{
   background-color: #f1f1f1;
 }
 
+p{
+	 text-align: justify;
+}
 
+.card-body{
+	padding:0.5rem;	
+}
+.card .card-img-top{
+	max-height:180px !important;
+}
