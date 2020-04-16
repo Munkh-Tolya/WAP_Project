@@ -160,7 +160,7 @@ public class DataRepository{
 		this.shoppingCard.removeItem(getItemByProductId(productId));		
 	}
 	public void emptyShoppingCart() {
-		this.shoppingCard = null;
+		this.shoppingCard = new ShoppingCard();
 	}
 	/*Added by: Namuun; April 15, 2020; END:*/
 }
