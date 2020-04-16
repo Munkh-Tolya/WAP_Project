@@ -2,7 +2,7 @@
 	<div id="toolbar">
 		<div class="container">
 			<div class="float-right">
-				<a href="/admin" class="link-admin up">Admin</a>				
+				<a href="admin" class="link-admin up">Admin</a>				
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -42,6 +42,9 @@
 						</a>										             	
 			      	</c:forEach>
 			        </div>
+		      	</li>
+		      	<li class="nav-item">
+		        	<a class="nav-link" href="<c:url value="/orders"/>">Orders</a>
 		      	</li>
 		      	<li class="nav-item">
 		        	<a class="nav-link" href="<c:url value="/about-us"/>">About Us</a>

@@ -38,6 +38,7 @@
 			<!-- Section: Promotion -->
 			<%@ include file="/WEB-INF/fragments/promotion.jsp" %>
 			
+			
 			<!-- Section: Products Tabs -->
 			<%@ include file="/WEB-INF/fragments/promotedProducts.jsp" %>
 			

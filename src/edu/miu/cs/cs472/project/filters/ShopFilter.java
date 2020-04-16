@@ -61,5 +61,4 @@ public class ShopFilter implements Filter {
 		shoppingService = new ShoppingService(fConfig.getServletContext());
 		shoppingCardService = new ShoppingCardService(fConfig.getServletContext());
 	}
-
 }

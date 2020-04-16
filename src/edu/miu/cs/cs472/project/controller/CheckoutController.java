@@ -50,7 +50,7 @@ public class CheckoutController extends HttpServlet {
 		Order newOrder = checkoutService.addOrder(
 				request.getParameter("firstName"), request.getParameter("lastName"), request.getParameter("address"), request.getParameter("city"), request.getParameter("state"),
 				request.getParameter("zipCode"), request.getParameter("email"), request.getParameter("phone"), request.getParameter("note"), orderId
-			);
+		);
 		request.setAttribute("orderInfo", newOrder);
 		System.out.println(checkoutService.getOrders());
 		
