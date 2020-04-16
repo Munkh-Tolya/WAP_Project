@@ -54,7 +54,8 @@ public class ShoppingCardService {
 		int productId = Integer.parseInt(strProductId);
 		try {
 			Product product = dataRepository.getProductById(productId);
-			dataRepository.removeIitemFromCard(productId);
+			Item item = dataRepository.removeIitemFromCard(productId);
+			product.setQuantity(product.getQuantity() + item.getQuantity());
 			jo.put("success", true);
 			jo.put("message", "The product " + product.getName() + " has been removed from your cart.");
 			jo.put("cardSize", dataRepository.getShoppingCard().getItems().size());

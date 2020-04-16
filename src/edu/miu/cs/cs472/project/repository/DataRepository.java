@@ -165,8 +165,10 @@ public class DataRepository{
 		this.orderList.add(newOrder);
 		return newOrder;
 	}
-	public void removeIitemFromCard(int productId) {
-		this.shoppingCard.removeItem(getItemByProductId(productId));		
+	public Item removeIitemFromCard(int productId) {
+		Item item = getItemByProductId(productId);
+		this.shoppingCard.removeItem(item);		
+		return item;
 	}
 	public void emptyShoppingCart() {
 		this.shoppingCard = new ShoppingCard();

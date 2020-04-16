@@ -34,13 +34,13 @@
 					<c:set var="sum" scope="page" value="${sum + item.price}" />
 		         	<div class="cart-item row mb20" id="item-<c:out value="${item.product.id}"/>">
 						<div class="col-md-2 col-sm-4 col-xs-6">
-							<a href="<c:url value="/product/${item.product.id}"/>" class="thumb" target="_blank">
+							<a href="<c:url value="/product?productId=${item.product.id}"/>" class="thumb" target="_blank">
 								<img src="<c:out value = "${item.product.imagePath}" />" />
 							</a>							
 						</div>
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="col-wrap">
-								<a href="<c:url value="/product/${item.product.id}"/>" class="title"><c:out value = "${item.product.name}"/></a>
+								<a href="<c:url value="/product?productId=${item.product.id}"/>" class="title"><c:out value = "${item.product.name}"/></a>
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-4 col-xs-6">
