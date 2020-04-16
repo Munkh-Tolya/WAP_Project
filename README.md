@@ -39,5 +39,6 @@ In this project we have chosen e-commerce web application. E-Commerce web applic
 - Remove item from the cart
 - Checkout / Create an order
 - Add product
+- Delete product
 
 
