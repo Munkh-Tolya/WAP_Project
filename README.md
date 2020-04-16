@@ -17,5 +17,19 @@ In this project we have chosen e-commerce web application. E-Commerce web applic
 - jQuery AJAX, Fetch API, JSON, JSP, JSTL, Servlet, Filters, Model 2 MVC design
 
 
-## Features
-- 
+## Pages
+
+- Home
+- Shop / Products
+- Product Detail
+- About Us
+- Shopping Cart
+- Checkout
+
+## Main Functions
+
+- Add item to shopping cart
+- Show shopping cart
+- Remove item from the cart
+- Checkout / Create an order
+- Add product
