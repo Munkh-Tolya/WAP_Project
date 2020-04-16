@@ -7,10 +7,10 @@
 					<c:forEach var="product" items="${featuredProducts}">
 			         	<div class="item row mb20">
 							<div class="col-md-3 col-sm-4 col-xs-6">
-								<a href="<c:url value="/"/>" class="thumb"><img src="<c:out value = "${product.imagePath}" />" /></a>							
+								<a href="<c:url value="/product?productId=${product.id}"/>" class="thumb"><img src="<c:out value = "${product.imagePath}" />" /></a>							
 							</div>
 							<div class="col-md-9 col-sm-8 col-xs-6">
-								<a href="<c:url value="/"/>" class="title"><c:out value = "${product.name}"/></a>
+								<a href="<c:url value="/product?productId=${product.id}"/>" class="title"><c:out value = "${product.name}"/></a>
 								<div class="star-review">
 									<i class="material-icons">star_rate</i>
 									<i class="material-icons">star_rate</i>
@@ -32,10 +32,10 @@
 					<c:forEach var="product" items="${topProducts}">
 			         	<div class="item row mb20">
 							<div class="col-md-3 col-sm-4 col-xs-6">
-								<a href="<c:url value="/"/>" class="thumb"><img src="<c:out value = "${product.imagePath}" />" /></a>							
+								<a href="<c:url value="/product?productId=${product.id}"/>" class="thumb"><img src="<c:out value = "${product.imagePath}" />" /></a>							
 							</div>
 							<div class="col-md-9 col-sm-8 col-xs-6">
-								<a href="<c:url value="/"/>" class="title"><c:out value = "${product.name}"/></a>
+								<a href="<c:url value="/product?productId=${product.id}"/>" class="title"><c:out value = "${product.name}"/></a>
 								<div class="star-review">
 									<i class="material-icons">star_rate</i>
 									<i class="material-icons">star_rate</i>
@@ -57,10 +57,10 @@
 					<c:forEach var="product" items="${hotProducts}">
 			         	<div class="item row mb20">
 							<div class="col-md-3 col-sm-4 col-xs-6">
-								<a href="<c:url value="/"/>" class="thumb"><img src="<c:out value = "${product.imagePath}" />" /></a>							
+								<a href="<c:url value="/product?productId=${product.id}"/>" class="thumb"><img src="<c:out value = "${product.imagePath}" />" /></a>							
 							</div>
 							<div class="col-md-9 col-sm-8 col-xs-6">
-								<a href="<c:url value="/"/>" class="title"><c:out value = "${product.name}"/></a>
+								<a href="<c:url value="/product?productId=${product.id}"/>" class="title"><c:out value = "${product.name}"/></a>
 								<div class="star-review">
 									<i class="material-icons">star_rate</i>
 									<i class="material-icons">star_rate</i>
