@@ -20,7 +20,7 @@ function addProduct(event){
 		if(response.success){
 			$('#itemCount').text(response.cardSize);
 			showSuccess(response.message);
-			$("#inputQty").val(1);
+			location.reload(true); 
 		}else{
 			showError(response.message);
 		}
