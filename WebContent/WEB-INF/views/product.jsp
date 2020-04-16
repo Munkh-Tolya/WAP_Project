@@ -36,7 +36,7 @@
 				<input type="text" disabled value="1" id="inputQty" class="inputQuantity" />
 				<button id="plus" class="buttonQuantity">+</button>
 				<div class="buttons">
-					<button class="btn btn-orange" id="addToCard" value="${product.id}">ADD TO CARD</button> 
+					<button class="btn btn-orange" id="addToCard" value="${product.id}">ADD TO CARD</button>  
 				</div>
 			</div>
 			<div class="col-3">
