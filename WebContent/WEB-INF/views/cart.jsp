@@ -76,7 +76,7 @@
 		      	</div>
 	      	</c:if>			
 	      	<c:if test = "${empty shoppingCard.items}" >
-	      		<div>Your Shopping Card is empty.</div>
+	      		<div>Your Shopping Cart is empty.</div>
 	      		
 	      	</c:if>		      	
 			</section>			
