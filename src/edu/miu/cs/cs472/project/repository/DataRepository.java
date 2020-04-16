@@ -174,4 +174,11 @@ public class DataRepository{
 		this.shoppingCard = new ShoppingCard();
 	}
 	/*Added by: Namuun; April 15, 2020; END:*/
+	
+	/** burmaa */
+	public Category getCategoryById(int id) {
+		Category cat = categoryList.stream().filter(category -> category.getId() == id).findAny().orElse(null);
+		return cat;
+	}
+	/****/
 }
