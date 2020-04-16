@@ -77,7 +77,6 @@ public class ShoppingController extends HttpServlet{
     public void init(ServletConfig config) throws ServletException {
     	shoppingService = new ShoppingService(config.getServletContext());
     	shoppingCardService = new ShoppingCardService(config.getServletContext());
-    	System.out.println("creating");
     
     }
     

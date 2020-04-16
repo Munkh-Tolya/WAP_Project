@@ -4,7 +4,7 @@
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<a href="<c:url value="/"/>" class="logo"><img src="images/logo.png" /></a>
 				<div class="foo-desc">
-					This is E-Commerce system. Project is made by group of 5 students of MIU. 
+					This is E-Commerce application that have been made by 5 students of MIU.
 				</div>
 			</div>
 			<div class="col-md-2 col-sm-6 col-xs-12">

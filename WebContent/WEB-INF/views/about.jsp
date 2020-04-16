@@ -15,45 +15,38 @@
   
     	<!-- <link rel="stylesheet" href="WEB-INF/css/main.css"> -->
     	<link rel="stylesheet" href="css/about.css">
-    	
+    	<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>		
 		<%@ include file="/WEB-INF/fragments/header.jsp" %>
-		
-			<div class="row">
-			 	<div class="col-md-6 col-sm-6 col-xs-12">
-					<img src="images/miu.jpg" alt="Trulli">
-	        	</div>
-		    	<div class="col-md-6 col-sm-6 col-xs-12">
-			          <h1>  WAP Project: eshopping </h1>
+		<div class="container">
+			<div class="row mb-4">
+		    	<div class="col-md-6 col-sm-6 col-xs-12" style="border-right:1px solid rgba(0,0,0,.125);">
+			          <h2 class="text-center">About project</h2>
 			          <p>
-			            This site is for the users and the site visitors and store customers purchase products and 
-			            services from businesses. No customer should ever be taken for granted by any business and 
-			            this rings especially true in ecommerce, where visitors can abandon a potential purchase with
-			            a single click. Every aspect of a brand ecommerce presence should be tailored toward 
-			            creating high quality, personalized experiences for each user and their individual 
-			            customer journeys.
-			            
-			          </p>  
-			          <p>
-			             This Project was developed by members of Team: Munkh-Erdene.T, Namuun.S, Burmaa.E, Otgonbayar.M,
-			            and O. Uuganbayar
+			          This is a final project task of Web application programming(CS472) at MIU.
+			          </p>
+			          <p> 
+			          We have developed this project team as group of 5 members.
+			          In this project we have chosen e-commerce web application. 
+			          E-Commerce web applications are very popular and useful in modern world. 
+			          Also, many scenarios are convenient to use jQuery ajax and restful API.  Hence, we implemented many features that we learn from this course.
 			          </p>
 			          
-			           <button type="button" class="collapsible">How to become our partner</button>
+			           <button type="button" class="collapsible"> - Advantage of E-commerce</button>
 						<div class="content">
-						  <p>We cover the market with an ever-growing network of business and technology partners that we actively
+						  <p>Application covers the market with an ever-growing network of business and technology partners that we actively
 						   support in terms of technical support, sales, and marketing. We are keen on promoting the highest 
 						   possible return on partnerships. By providing the highest standard of client services, our partners
 						   can rely on us as a stable source of income.</p>
 						</div>
-					     <button type="button" class="collapsible">Sell your product here</button>
+					     <button type="button" class="collapsible"> - Why E-commerce ? </button>
 						<div class="content">
 						  <p>The world of eCommerce selling products and services through the internet, offers vast opportunity for
 						   entrepreneurs. If you're interested in starting a business, selling online can be extremely rewarding. 
 						   It can also provide a path to success without the risks involved in buying property and opening a physical store..</p>
 						</div>	
-						<button type="button" class="collapsible">Awesome quality</button>
+						<button type="button" class="collapsible"> - Awesome quality of application</button>
 						<div class="content">
 						  <p>Perfecting product quality has numerous benefits for any company. The positive correlation between product
 						   quality and sales should be reason enough to make quality a top priority in a business strategy. The trust, 
@@ -61,87 +54,64 @@
 						</div>	
 								          
 			    </div>
+			    <div class="col-md-6 col-sm-6 col-xs-12">
+			    	<h2 class="text-center">Team members</h2>
+			    	<div class="row">
+			    		<div class="col-md-4 mt-2" >
+				    		<div class="card" style="width: 12rem;">
+							  <img class="card-img-top" src="images/male.PNG" alt="Card image cap">
+							  <div class="card-body justify-content-center">
+							    <p class="card-text"><b>Munkh-Erdene Tolya</b><br/>
+							    	<small id="emailHelp" class="text-muted">Team member</small>
+							    </p>
+							  </div>
+							</div>
+			    		</div>
+			    		<div class="col-md-4 mt-2" >
+				    		<div class="card" style="width: 12rem;">
+							  <img class="card-img-top" src="images/female.PNG" alt="Card image cap">
+							  <div class="card-body justify-content-center">
+							    <p class="card-text"><b>Namuun Sainbayar</b><br/>
+							    	<small id="emailHelp" class="text-muted">Team member</small>
+							    </p>
+							  </div>
+							</div>
+			    		</div>
+			    		<div class="col-md-4 mt-2" >
+				    		<div class="card" style="width: 12rem;">
+							  <img class="card-img-top" src="images/male.PNG" alt="Card image cap">
+							  <div class="card-body justify-content-center">
+							    <p class="card-text"><b>Otgonbayar Mijiddorj</b><br/>
+							    	<small id="emailHelp" class="text-muted">Team member</small>
+							    </p>
+							  </div>
+							</div>
+			    		</div>
+			    		<div class="col-md-4 mt-2" >
+				    		<div class="card" style="width: 12rem;">
+							  <img class="card-img-top" src="images/female.PNG" alt="Card image cap">
+							  <div class="card-body justify-content-center">
+							    <p class="card-text"><b>Burmaa Enkhbat</b><br/>
+							    	<small id="emailHelp" class="text-muted">Team member</small>
+							    </p>
+							  </div>
+							</div>
+			    		</div>
+			    		<div class="col-md-4 mt-2" >
+				    		<div class="card" style="width: 12rem;">
+							  <img class="card-img-top" src="images/male.PNG" alt="Card image cap">
+							  <div class="card-body justify-content-center">
+							    <p class="card-text"><b>Uuganbayar Oyun</b><br/>
+							    	<small id="emailHelp" class="text-muted">Team member</small>
+							    </p>
+							  </div>
+							</div>
+			    		</div>
+			    	</div>
+	        	</div>
 		    </div>
-		  
-		  </br>
-		  </br>
-		  </br>
-	
-		  <section class="brand-promises border-gray-ligth mb30">  
-			<div class="row">
-			
-		           <div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="item bonus-plus has-sep">
-							<h4>Pure quality</h4>
-							<div class="desc">Get a bonus plus for buying more that three products</div>
-						</div>
-		           </div>
-		           
-		        	<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="item free-shipping has-sep">
-							<h4>Free Shipping</h4>
-							<div class="desc">Free shipping on all orders over $99</div>
-						</div>
-					</div>
-					
-			    	<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="item money-back-guarentee has-sep">
-							<h4>Home delivery</h4>
-							<div class="desc">100% money back guarantee</div>
-						</div>
-					</div>
-		  
-		      </div>     
-		   </section>
-		    
-		    
-		    <section class="brand-promises border-gray-ligth mb30">  
-		     	<div class="row">
-						
-						<div class="col-md-2 col-sm-3 col-xs-12">
-						  <div class="item featured-products">
-						    	<img src="images/image1.png" alt="Trulli" width="300" height="300" border="2">
-						     	<h4></h4>
-						    	<h4>Team member</h4>
-						        <h5> Munkh-Erdene.T </h5>
-						   </div>
-						</div>
-						<div class="col-md-2 col-sm-3 col-xs-12">
-							<div class="item featured-products">
-							     <img src="images/image3.jpg" alt="Trulli" width="300" height="300" border="5" >
-							     <h4></h4>
-							     <h4>Team member</h4>
-						         <h5> Namuun.S </h5>
-						    </div>
-						</div>
-						
-					  	<div class="col-md-2 col-sm-3 col-xs-12">
-					  	    <div class="item featured-products">
-						    	<img src="images/image4.jpg" alt="Trulli" width="300" height="300">
-						    	    <h4></h4>
-						    		<h4>Team member</h4>
-						        	<h5> Burmaa.E </h5>
-					    	</div>
-						</div>
-						
-					    <div class="col-md-2 col-sm-3 col-xs-12">
-					      <div class="item featured-products">
-					    	<img src="images/image2.jpg" alt="Trulli" width="300" height="300">
-					    		<h4></h4>
-					    		<h4>Team member</h4>
-						        <h5> Otgonbayar.M </h5>
-					    	</div>
-						</div>
-						
-						<div class="col-md-2 col-sm-3 col-xs-12">
-						   <div class="item featured-products">
-					    	<img src="images/image.jpg" alt="Trulli" width="300" height="300">
-					    	    <h4></h4>
-					    		<h4>Team member</h4>
-						        <h5> Uuganbayar.O </h5>
-						</div>
-			     </div>			
-		 </section>
+		    <%@ include file="/WEB-INF/fragments/brandPromise.jsp" %>
+		  </div>
 		
 		<!-- JQuery & app.js files are included in the footer element. -->
 		<%@ include file="/WEB-INF/fragments/footer.jsp" %>		
