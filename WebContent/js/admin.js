@@ -19,7 +19,7 @@ const loadImage = function(event){
 
 function deleteProduct(id){
 		fetch(
-		      'http://localhost:8080/wap_project/delete-product',
+		      'http://localhost:8081/wap_project/delete-product',
 		      {
 		        method: 'POST',
 		        mode: 'no-cors',
@@ -30,7 +30,9 @@ function deleteProduct(id){
 		      }
 		    )
 		      .then((result) => {
-		    	  console.log(res)
+		    	  if(result.ok){
+		    		  $('#row-'+id).remove();
+		    	  }
 		      })
 		      .catch((res) => console.log(res));
 		
